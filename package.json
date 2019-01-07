@@ -1,0 +1,14 @@
+{
+  "name": "wcm-dubune",
+  "version": "1.0.0",
+  "description": "wcm-dubune homepage",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "wcm-dubune",
+  "email": "wcm.dubune@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
