@@ -56,11 +56,6 @@
 	transition-delay: 0s;
 }
 
-.rm-wrapper .rm-middle,
-.rm-wrapper .rm-right {
-	pointer-events: none;
-}
-
 .rm-wrapper > div > div {
 	/* background: #fff url(../images/white_paperboard.jpg); */
 	background: #fff;

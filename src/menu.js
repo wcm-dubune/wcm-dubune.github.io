@@ -5,15 +5,16 @@ module.exports = class Menu {
 		this.cover = this.container.querySelector('div.rm-cover');
 		this.middle = this.container.querySelector('div.rm-middle');
 		this.right = this.container.querySelector('div.rm-right');
-		// this.details = this.container.querySelector('a.rm-viewdetails');
 		this.open = this.cover.querySelector('a.rm-button-open');
 		this.close = this.right.querySelector('span.rm-close');
+		this._updateMenus();
 	}
 
 	_updateMenus() {
 		this._updateMenu(this.cover, 'left', 'rm-back');
 		this._updateMenu(this.middle, 'center', 'rm-inner');
 		this._updateMenu(this.right, 'right', 'rm-back');
+		this.details = this.container.querySelectorAll('a.rm-viewdetails');
 	}
 
 	_updateMenu(targetCover, pos, coverClass) {
@@ -45,7 +46,10 @@ module.exports = class Menu {
 
 	_renderSubmenu(submenuJson) {
 		return submenuJson.map((s) => {
-			return `
+			return s.thumb ? `
+				<dt><a href="#" class="rm-viewdetails" data-thumb="${s.thumb}">${s.name}</a><span>${s.price}</span></dt>
+				<dd>${s.desc}</dd>
+			` : `
 				<dt>${s.name}<span>${s.price}</span></dt>
 				<dd>${s.desc}</dd>
 			`;
@@ -55,7 +59,6 @@ module.exports = class Menu {
 	init() {
 		console.info('Menu: init');
 		this._initEvents();
-		this._updateMenus();
 	}
 
 	_initEvents() {
@@ -70,12 +73,19 @@ module.exports = class Menu {
 			e.stopPropagation();
 		});
 
-		// this.details.addEventListener('click', (e) => {
-		// 	this.container.classList.remove('rm-in');
-		// 	// $container.removeClass('rm-in').children('div.rm-modal').remove();
-		// 	this._viewDetails(e.target);
-		// 	e.stopPropagation();
-		// });
+
+		this.details.forEach((d) => {
+			d.addEventListener('click', (e) => {
+				e.preventDefault();
+				console.info(e);
+				this.container.classList.remove('rm-in');
+				if (this.container.querySelector('div.rm-modal'))
+					this.container.querySelector('div.rm-modal').remove();
+
+				this._viewDetails(e);
+				e.stopPropagation();
+			});
+		});
 	}
 
 	_openMenu() {
@@ -87,31 +97,33 @@ module.exports = class Menu {
 		this.container.classList.remove(...clzz);
 	}
 
-	_viewDetails(recipe) {
-		// TODO: viewDetail
-		console.info('_viewDetail', recipe);
-		// var title = recipe.text(),
-		// 	img = recipe.data('thumb'),
-		// 	description = recipe.parent().next().text(),
-		// 	url = recipe.attr('href');
+	_viewDetails(e) {
+		let recipe = e.target;
+		let positionY = e.pageY;
+		let title = recipe.textContent,
+			img = recipe.getAttribute('data-thumb'),
+			description = recipe.parentNode.nextElementSibling.textContent;
 
-		// var $modal = $('<div class="rm-modal"><div class="rm-thumb" style="background-image: url(' + img + ')"></div><h5>' + title + '</h5><p>' + description + '</p><a href="' + url + '">See the recipe</a><span class="rm-close-modal">x</span></div>');
+		let modal = `
+			<div class="rm-thumb" style="background-image: url(${img})"></div><h5>${title}</h5><p>${description}</p><span class="rm-close-modal">x</span>
+		`;
 
-		// $modal.appendTo($container);
+		let modalWapp = document.createElement('div');
+		modalWapp.classList.add('rm-modal');
+		modalWapp.innerHTML = modal;
+		
+		if (window.outerWidth < 960) {
+			modalWapp.style.top = `${positionY}px`;
+		}
 
-		// var h = $modal.outerHeight(true);
-		// $modal.css('margin-top', -h / 2);
+		this.container.appendChild(modalWapp)
 
-		// setTimeout(function () {
+		setTimeout(() => {
+			this.container.classList.add('rm-in', 'rm-nodelay');
 
-		// 	$container.addClass('rm-in rm-nodelay');
-
-		// 	$modal.find('span.rm-close-modal').on('click', function () {
-
-		// 		$container.removeClass('rm-in');
-
-		// 	});
-
-		// }, 0);
+			modalWapp.querySelector('span.rm-close-modal').addEventListener('click', () => {
+				this.container.classList.remove('rm-in');
+			});
+		}, 0);
 	}
 }
