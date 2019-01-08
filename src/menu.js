@@ -77,7 +77,7 @@ module.exports = class Menu {
 		this.details.forEach((d) => {
 			d.addEventListener('click', (e) => {
 				e.preventDefault();
-				console.info(e);
+
 				this.container.classList.remove('rm-in');
 				if (this.container.querySelector('div.rm-modal'))
 					this.container.querySelector('div.rm-modal').remove();
