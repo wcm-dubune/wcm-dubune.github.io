@@ -5,46 +5,40 @@ export default {
                 subTitle: '식사류',
                 menus: [
                     {
-                        name: '두부네 정식',
-                        price: '00,000원',
+                        name: '두부 전골',
+                        price: '14,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '전복 순두부',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: '1인분 이상 주문 가능'
                     },
                     {
                         name: '얼큰 순두부',
-                        price: '00,000원',
+                        price: '9,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
-                        name: '순두부',
-                        price: '00,000원',
+                        name: '즉석순두부',
+                        price: '8,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
+                    },
+                    {
+                        name: '청국장',
+                        price: '9,000원',
+                        thumb: 'images/1.jpg',
+                        desc: ''
                     },
                     {
                         name: '곤드레밥',
-                        price: '00,000원',
+                        price: '9,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
-                        name: '된장찌개',
-                        price: '00,000원',
+                        name: '수제 돈까스',
+                        price: '9,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '돌솥 고등어구이',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     }
                 ]
             },
@@ -53,15 +47,15 @@ export default {
                 menus: [
                     {
                         name: '고기 추가',
-                        price: '00,000원',
+                        price: '10,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
                         name: '돌솥밥 추가',
-                        price: '00,000원',
+                        price: '2,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     }
                 ]
             }
@@ -73,58 +67,34 @@ export default {
                 subTitle: '메인 메뉴',
                 menus: [
                     {
-                        name: '두부네 보쌈',
-                        price: '00,000원',
+                        name: '홍어 삼합',
+                        price: '30,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: '두부 + 고기 + 홍어'
                     },
                     {
-                        name: '모듬보쌈',
-                        price: '00,000원',
+                        name: '홍어',
+                        price: '15,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
-                        name: '굴보쌈',
-                        price: '00,000원',
+                        name: '수육',
+                        price: '10,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
-                        name: '두부버섯전골',
-                        price: '00,000원',
+                        name: '모두부',
+                        price: '10,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '모두부 북은지',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '두부지짐',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '두부동그랑땡',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
                         name: '메밀전병',
+                        price: '10,000원',
                         thumb: 'images/1.jpg',
-                        price: '00,000원',
-                        desc: 'a'
-                    },
-                    {
-                        name: '도토리묵',
-                        thumb: 'images/1.jpg',
-                        price: '00,000원',
-                        desc: 'a'
+                        desc: ''
                     }
                 ]
             }
@@ -137,68 +107,55 @@ export default {
                 menus: [
                     {
                         name: '소주',
-                        price: '00,000원',
+                        price: '4,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
                         name: '맥주',
-                        price: '00,000원',
+                        price: '4,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
-                        name: '청하',
-                        price: '00,000원',
+                        name: '막걸리',
+                        price: '3,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '생막걸리',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '복분자',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
                         name: '음료수',
-                        price: '00,000원',
+                        price: '2,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     }
                 ]
             },
             {
-                subTitle: '계절메뉴',
+                subTitle: '계절메뉴(하계)',
                 menus: [
                     {
-                        name: '[여름]콩국수',
-                        price: '00,000원',
+                        name: '콩국수',
+                        price: '9,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     },
                     {
-                        name: '[여름]묵밥',
-                        price: '00,000원',
+                        name: '도토리묵 무침',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
+                        price: '10,000원',
+                        desc: ''
+                    }
+                ]
+            },
+            {
+                subTitle: '계절메뉴(동계)',
+                menus: [
                     {
-                        name: '[겨울]콩나물 굴돌솥밥',
-                        price: '00,000원',
+                        name: '생굴',
+                        price: '10,000원',
                         thumb: 'images/1.jpg',
-                        desc: 'a'
-                    },
-                    {
-                        name: '[겨울]생굴',
-                        price: '00,000원',
-                        thumb: 'images/1.jpg',
-                        desc: 'a'
+                        desc: ''
                     }
                 ]
             }

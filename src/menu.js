@@ -39,7 +39,7 @@ module.exports = class Menu {
 
 		let contentWapp = document.createElement('div');
 		contentWapp.classList.add('rm-content');
-		contentWapp.innerHTML = els;
+		contentWapp.innerHTML = els.join('');
 		
 		targetNode.appendChild(contentWapp);
 	}

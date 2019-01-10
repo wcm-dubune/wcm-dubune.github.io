@@ -144,7 +144,7 @@ a.rm-button-open,
 }
 
 .rm-content h3 {
-	font-size: 13px;
+	font-size: 14px;
 	margin: 40px 0;
 	padding: 20px 40px;
 	color: #323b4c;
@@ -183,6 +183,7 @@ a.rm-button-open:hover {
 }
 
 .rm-info p {
+	font-size: 14px;
 	line-height: 20px;
 }
 
@@ -200,6 +201,7 @@ a.rm-button-open:hover {
 .rm-content dl dt {
 	font-weight: 500;
 	text-transform: uppercase;
+	padding: 10px 0;
 }
 
 .rm-content dl dt span {
@@ -227,7 +229,6 @@ a.rm-viewdetails:before{
 	speak: none;
 	display: inline-block;
 	text-decoration: inherit;
-	width: 15px;
 	margin-right: 4px;
 	text-align: center;
 	opacity: 0.7;
@@ -240,7 +241,7 @@ a.rm-viewdetails:before{
 	z-index: 10000;
 	width: 120%;
 	margin-left: -10%;
-	top: 50%;
+	top: 30%;
 	padding: 40px;
 	background: #fff url(../images/white_paperboard.jpg);
 	box-shadow: 
@@ -255,6 +256,7 @@ a.rm-viewdetails:before{
 	pointer-events: none;
 	-webkit-transform: translateZ(1000px);
 	transform: translateZ(1000px);
+	text-align: center;
 }
 
 .rm-modal h5 {
@@ -264,12 +266,12 @@ a.rm-viewdetails:before{
 }
 
 .rm-modal .rm-thumb {
-	width: 100px;
-	height: 100px;
+	display: inline-block;
+	width: 200px;
+	height: 200px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	float: left;
-	margin: 0 20px 0 0;
+	margin: 0 0 20px 0;
 	box-shadow: 
 		inset 1px 1px 3px rgba(0,0,0,0.2), 
 		1px 1px 1px rgba(255,255,255,0.9);
@@ -464,7 +466,7 @@ a.rm-viewdetails:hover,
 .no-csstransforms3d .rm-modal {
 	position: fixed;
 	width: 80%;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	margin: 0 0 0 -40%;
 	-webkit-transition: opacity 0.6s ease-in-out 0s;
@@ -484,7 +486,7 @@ a.rm-viewdetails:hover,
 
 @media screen and (max-width: 1110px) {
 	.rm-container {
-		height: 800px;
+		height: 750px;
 	}
 }
 
@@ -543,7 +545,7 @@ a.rm-viewdetails:hover,
 	.rm-container .rm-modal {
 		position: fixed;
 		width: 80%;
-		top: 50%;
+		top: 30%;
 		left: 50%;
 		margin: 0 0 0 -40%;
 		-webkit-transform: translateZ(0px);
