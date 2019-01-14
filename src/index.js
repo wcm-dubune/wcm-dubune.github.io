@@ -1,6 +1,10 @@
-import Menu from "./menu.js";
-import MenuJSON from "./menu-json.js";
+import Vue from 'vue';
+import WcmMain from './vue/wcm-main.vue';
 
-window.onload = () => {
-    new Menu(MenuJSON).init();
-};
+new Vue({
+	el: '#app',
+	components: {
+		WcmMain
+	}
+});
+export default {};
