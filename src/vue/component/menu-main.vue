@@ -1,13 +1,14 @@
 <template>
-	<section class="main">
+	<section class="main" :class="{
+			'rm-in': dataOpenModal
+		}">
+		<menu-modal
+			ref="menu-modal"
+			@onCloseModal="_closeModal"></menu-modal>
 		<div id="rm-container" class="rm-container" :class="{
 			'rm-open': dataOpenMenu,
-			'rm-in': dataOpenModal,
 			'rm-nodelay': dataOpenModal
 		}">
-			<menu-modal
-				ref="menu-modal"
-				@onCloseModal="_closeModal"></menu-modal>
 			<div class="rm-wrapper">
 				<menu-cover 
 					@onOpenMenu="_openMenu"
@@ -53,7 +54,7 @@ export default {
 	},
 	methods: {
 		_openModal(e) {
-			this.$refs['menu-modal'].dataPageY = e.pageY;
+			// this.$refs['menu-modal'].dataPageY = e.pageY;
 			this.$refs['menu-modal'].dataImg = e.img;
 			this.$refs['menu-modal'].dataTitle = e.title;
 			this.$refs['menu-modal'].dataPrice = e.price;

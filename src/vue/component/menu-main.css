@@ -225,9 +225,9 @@ a.rm-viewdetails:before{
 .rm-modal {
 	position: absolute;
 	z-index: 10000;
-	width: 120%;
-	margin-left: -10%;
+	width: 600px;
 	top: 30%;
+	left: calc(50% - 300px);
 	padding: 40px;
 	background: #fff url(../../../resources/images/white_paperboard.jpg);
 	box-shadow: 
@@ -371,29 +371,29 @@ a.rm-viewdetails:hover,
 	transition-delay: 0.2s;
 }
 
-.rm-container.rm-in .rm-cover {
+.main.rm-in .rm-cover {
 	-webkit-transform: rotateY(-150deg);
 	transform: rotateY(-150deg);
 }
 
-.rm-container.rm-in .rm-right {
+.main.rm-in .rm-right {
 	-webkit-transform: rotateY(150deg);
 	transform: rotateY(150deg);
 }
 
-.rm-container.rm-in .rm-wrapper {
+.main.rm-in .rm-wrapper {
 	-webkit-transform: translateZ(-500px);
 	transform: translateZ(-500px);
 }
 
-.rm-container.rm-in .rm-cover, 
-.rm-container.rm-in .rm-right,
+.main.rm-in .rm-cover, 
+.main.rm-in .rm-right,
 .rm-container.rm-nodelay .rm-right {
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
 }
 
-.rm-container.rm-in .rm-modal {
+.main.rm-in .rm-modal {
 	-webkit-transform: translateZ(0px);
 	transform: translateZ(0px);
 	opacity: 1;
@@ -459,9 +459,9 @@ a.rm-viewdetails:hover,
 	transition: opacity 0.6s ease-in-out 0s;
 }
 
-.no-csstransforms3d .rm-container.rm-in .rm-cover,
-.no-csstransforms3d .rm-container.rm-in .rm-right,
-.no-csstransforms3d .rm-container.rm-in .rm-wrapper {
+.no-csstransforms3d .main.rm-in .rm-cover,
+.no-csstransforms3d .main.rm-in .rm-right,
+.no-csstransforms3d .main.rm-in .rm-wrapper {
 	-webkit-transform: rotateY(0deg);
 	-webkit-transition-delay: 0s;
 	transform: rotateY(0deg);
@@ -528,7 +528,29 @@ a.rm-viewdetails:hover,
 		content: '\2193';
 	}
 
-	.rm-container .rm-modal {
+	.main .rm-modal {
+		position: fixed;
+		width: 368px;
+		top: 30%;
+		left: calc(50% - 184px);
+		-webkit-transform: translateZ(0px);
+		transform: translateZ(0px);
+		-webkit-transition: opacity 0.6s ease-in-out 0s;
+		transition: opacity 0.6s ease-in-out 0s;
+	}
+
+	.main.rm-in .rm-cover,
+	.main.rm-in .rm-right,
+	.main.rm-in .rm-wrapper {
+		-webkit-transform: rotateY(0deg);
+		-webkit-transition-delay: 0s;
+		transform: rotateY(0deg);
+		transition-delay: 0s;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.main .rm-modal {
 		position: fixed;
 		width: 80%;
 		top: 30%;
@@ -538,14 +560,5 @@ a.rm-viewdetails:hover,
 		transform: translateZ(0px);
 		-webkit-transition: opacity 0.6s ease-in-out 0s;
 		transition: opacity 0.6s ease-in-out 0s;
-	}
-
-	.rm-container.rm-in .rm-cover,
-	.rm-container.rm-in .rm-right,
-	.rm-container.rm-in .rm-wrapper {
-		-webkit-transform: rotateY(0deg);
-		-webkit-transition-delay: 0s;
-		transform: rotateY(0deg);
-		transition-delay: 0s;
 	}
 }
