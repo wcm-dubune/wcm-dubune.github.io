@@ -4,6 +4,7 @@
 		}">
 		<menu-modal
 			ref="menu-modal"
+			:rm-in="dataOpenModal"
 			@onCloseModal="_closeModal"></menu-modal>
 		<div id="rm-container" class="rm-container" :class="{
 			'rm-open': dataOpenMenu,
