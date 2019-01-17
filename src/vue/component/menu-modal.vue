@@ -4,7 +4,8 @@
 	}">
 		<div class="overlay"
 			@mousedown.self="clickClose"
-        	@touchstart.self="clickClose"></div>
+        	@touchstart.self="clickClose"
+			@touchmove.self="clickClose"></div>
 		<div class="rm-modal" :style="computedStyle">
 			<div class="rm-thumb" :style="computedImg"></div>
 			<h5>{{dataTitle}}</h5>
