@@ -1,9 +1,14 @@
 <template>
-	<div class="rm-modal" :style="computedStyle">
-		<div class="rm-thumb" :style="computedImg"></div>
-		<h5>{{dataTitle}}</h5>
-		<p>{{dataDescription}}</p>
-		<span class="rm-close-modal" @click="clickClose">x</span>
+	<div :class="{
+		'rm-in': rmIn
+	}">
+		<div class="overlay" @click="clickClose"></div>
+		<div class="rm-modal" :style="computedStyle">
+			<div class="rm-thumb" :style="computedImg"></div>
+			<h5>{{dataTitle}}</h5>
+			<p>{{dataDescription}}</p>
+			<span class="rm-close-modal" @click="clickClose">x</span>
+		</div>
 	</div>
 </template>
 
@@ -12,6 +17,7 @@
 export default {
 	name: 'menu-modal',
 	props: {
+		rmIn: Boolean,
 		show: Boolean,
 		pageY: Number,
 		img: String,
@@ -57,3 +63,34 @@ export default {
 	}
 };
 </script>
+
+<style>
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.3);
+
+	-webkit-transition: 
+	-webkit-transform 0.6s ease-in-out,
+	display 0.6s ease-in-out;
+	transition: 
+	transform 0.6s ease-in-out,
+	display 0.6s ease-in-out;
+}
+
+.rm-in .rm-modal {
+	-webkit-transform: translateZ(0px);
+	transform: translateZ(0px);
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.rm-in .overlay {
+	display: block;
+}
+</style>
