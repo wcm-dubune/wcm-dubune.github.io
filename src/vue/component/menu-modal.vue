@@ -2,12 +2,16 @@
 	<div :class="{
 		'rm-in': rmIn
 	}">
-		<div class="overlay" @click="clickClose"></div>
+		<div class="overlay"
+			@mousedown.self="clickClose"
+        	@touchstart.self="clickClose"></div>
 		<div class="rm-modal" :style="computedStyle">
 			<div class="rm-thumb" :style="computedImg"></div>
 			<h5>{{dataTitle}}</h5>
 			<p>{{dataDescription}}</p>
-			<span class="rm-close-modal" @click="clickClose">x</span>
+			<span class="rm-close-modal"
+				@mousedown.self="clickClose"
+				@touchstart.self="clickClose">x</span>
 		</div>
 	</div>
 </template>
