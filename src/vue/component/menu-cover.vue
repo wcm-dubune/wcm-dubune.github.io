@@ -52,3 +52,100 @@ export default {
 	}
 };
 </script>
+
+<style>
+.rm-content {
+	padding: 20px;
+}
+
+.rm-logo, 
+.rm-content h2,
+a.rm-button-open {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: 'Arvo', Arial, sans-serif;
+}
+
+
+a.rm-button-open {
+	color: #323b4c;	
+	font-size: 16px;
+	line-height: 45px;
+	margin: 10px auto;
+	display: block;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+a.rm-button-open:hover {
+	color: #e6b741;
+}
+
+.rm-button-open:after {
+	content: '\2192';
+	display: inline-block;
+	margin-left: 3px;
+	font-family: Arial, sans-serif;
+}
+
+.rm-content h2 {
+	letter-spacing: 2px;
+	font-size: 26px;
+	text-shadow: 1px 1px 0 #fff, 3px 3px 0 #e6b741;
+}
+
+.rm-content h3 {
+	font-size: 14px;
+	margin: 40px 0;
+	padding: 20px 40px;
+	color: #323b4c;
+	font-weight: 500;
+	border-top: 4px double #323b4c;
+	text-transform: uppercase;
+	line-height: 20px;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+}
+
+.rm-content h4 {
+	margin: 0 0 20px 0;
+	font-size: 16px;
+	padding-bottom: 10px;
+	color: #323b4c;
+	border-bottom: 4px double #323b4c;
+	text-shadow: 1px 1px 0 #fff, 2px 2px 0 #E6B741;
+	letter-spacing: 2px;
+}
+
+.rm-content h4:not(:first-child) {
+	margin-top: 35px;
+}
+
+.rm-logo {
+	width: 100px;
+	height: 100px;
+	background: #323b4c url(../../../resources/images/restaurant.jpg) no-repeat center center;
+	border-radius: 50%;
+	margin: 20px auto;
+	box-shadow: 
+		0 0 0 3px #fff, 
+		0 0 0 4px #e6b741, 
+		0 0 0 5px #fff, 
+		0 0 0 6px #e6b741, 
+		0 0 0 7px #fff, 
+		0 0 0 8px #e6b741;
+}
+
+.rm-info p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+@media screen and (max-width: 960px) {
+	.rm-button-open {
+		pointer-events: none;
+	}
+
+	.rm-button-open:after {
+		content: '\2193';
+	}
+}
+</style>

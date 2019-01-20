@@ -33,3 +33,14 @@ export default {
 	}
 };
 </script>
+<style>
+
+.rm-middle .rm-overlay {
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 64%, rgba(0,0,0,0.05) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(64%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.05)));
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 64%,rgba(0,0,0,0.05) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0) 64%,rgba(0,0,0,0.05) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0) 64%,rgba(0,0,0,0.05) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0) 64%,rgba(0,0,0,0.05) 100%);
+}
+</style>
