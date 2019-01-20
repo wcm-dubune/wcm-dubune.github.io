@@ -13,7 +13,6 @@
 					<strong>Phone</strong> 031.457.8588<br>
 					</p>
 				</div>
-
 			</div>
 		</div>
 
@@ -21,8 +20,7 @@
 			<menu-submenu v-for="item in datas"
 					:key="item.index"
 					:title="item.subTitle"
-					:menus="item.menus"
-					@onClickDetail="onClickDetail"></menu-submenu>
+					:menus="item.menus"></menu-submenu>
 			<div class="rm-overlay"></div>
 		</div>
 	</div>
@@ -49,10 +47,7 @@ export default {
 	},
 	methods: {
 		_openMenu() {
-			this.$emit('onOpenMenu');
-		},
-		onClickDetail(e) {
-			this.$emit('onClickDetail', e);
+			this.$store.commit('openMenu');
 		}
 	}
 };

@@ -1,12 +1,12 @@
 <template>
 	<div :class="{
-		'rm-in': rmIn
+		'rm-in': this.$store.state.openModal
 	}">
 		<div class="overlay"
 			@mousedown.self="clickClose"
         	@touchstart.self="clickClose"
 			@touchmove.self="clickClose"></div>
-		<div class="rm-modal" :style="computedStyle">
+		<div class="rm-modal">
 			<div class="rm-thumb" :style="computedImg"></div>
 			<h5>{{dataTitle}}</h5>
 			<p>{{dataDescription}}</p>
@@ -22,17 +22,12 @@
 export default {
 	name: 'menu-modal',
 	props: {
-		rmIn: Boolean,
-		show: Boolean,
-		pageY: Number,
 		img: String,
 		title: String,
 		description: String
 	},
 	data() {
 		return {
-			dataShow: this.show,
-			dataPageY: this.pageY,
 			dataImg: this.img,
 			dataTitle: this.title,
 			dataPrice: this.price,
@@ -40,30 +35,23 @@ export default {
 		}
 	},
 	mounted() {
-		// this.dataShow = false;
+		this.$EventBus.$on('onClickDetail', (e) => {
+			this.dataImg = e.img;
+			this.dataTitle = e.title;
+			this.dataPrice = e.price;
+			this.dataDescription = e.description;
+
+			this.$store.commit('openModal');
+		});
 	},
 	computed: {
-		computedStyle() {
-			if (window.outerWidth < 960) {
-				return `top: ${this.dataPageY}px`;
-			}
-			return '';
-		},
 		computedImg(v) {
 			return `background-image: url(${this.dataImg})`;
 		}
 	},
-	watch: {
-		dataShow: (v) => {
-			if (v) {
-				this.$emit('onOpenModal');
-			}
-		}
-	},
 	methods: {
 		clickClose() {
-			console.info('clickClose');
-			this.$emit('onCloseModal');
+			this.$store.commit('closeModal');
 		}
 	}
 };

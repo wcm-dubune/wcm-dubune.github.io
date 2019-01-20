@@ -3,12 +3,10 @@
 		<div class="rm-front"></div>
 		<div class="rm-back">
 			<span class="rm-close" @click="_closeMenu">Close</span>
-			<!-- <div class="rm-content"></div> -->
 			<menu-submenu v-for="item in datas"
 					:key="item.index"
 					:title="item.subTitle"
-					:menus="item.menus"
-					@onClickDetail="onClickDetail"></menu-submenu>
+					:menus="item.menus"></menu-submenu>
 		</div>
 	</div>
 </template>
@@ -33,10 +31,7 @@ export default {
 	},
 	methods: {
 		_closeMenu() {
-			this.$emit('onCloseMenu');
-		},
-		onClickDetail(e) {
-			this.$emit('onClickDetail', e);
+			this.$store.commit('closeMenu');
 		}
 	}
 };

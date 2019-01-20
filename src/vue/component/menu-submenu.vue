@@ -33,12 +33,9 @@ export default {
 	},
 	methods: {
 		clickDetail(e) {
-			console.log('click detail');
-			console.log(e);
 			let ds = e.target.dataset;
 
-			this.$emit('onClickDetail', {
-				pageY: e.pageY,
+			this.$EventBus.$emit('onClickDetail', {
 				img: ds.thumb,
 				title: ds.name,
 				price: ds.price,
@@ -47,33 +44,4 @@ export default {
 		}
 	}
 };
-
-// _renderMenu(targetNode, menuJson) {
-//             let els = menuJson.map((m) => {
-//                 return `
-// 				<h4>${m.subTitle}</h4>
-// 				<dl>
-// 				${this._renderSubmenu(m.menus).join('')}
-// 				</dl>
-// 				`;
-//             });
-
-//             let contentWapp = document.createElement('div');
-//             contentWapp.classList.add('rm-content');
-//             contentWapp.innerHTML = els.join('');
-
-//             targetNode.appendChild(contentWapp);
-//         },
-
-//         _renderSubmenu(submenuJson) {
-//             return submenuJson.map((s) => {
-//                 return s.thumb ? `
-// 					<dt><a href="#" class="rm-viewdetails" data-thumb="${s.thumb}">${s.name}</a><span>${s.price}</span></dt>
-// 					<dd>${s.desc}</dd>
-// 				` : `
-// 					<dt>${s.name}<span>${s.price}</span></dt>
-// 					<dd>${s.desc}</dd>
-// 				`;
-//             });
-//         }
 </script>

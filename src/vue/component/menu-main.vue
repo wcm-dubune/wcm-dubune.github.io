@@ -1,24 +1,17 @@
 <template>
 	<section class="main" :class="{
-			'rm-in': dataOpenModal
+			'rm-in': this.$store.state.openModal
 		}">
 		<menu-modal
-			ref="menu-modal"
-			:rm-in="dataOpenModal"
-			@onCloseModal="_closeModal"></menu-modal>
+			ref="menu-modal"></menu-modal>
 		<div id="rm-container" class="rm-container" :class="{
-			'rm-open': dataOpenMenu,
-			'rm-nodelay': dataOpenModal
+			'rm-open': this.$store.state.openMenu,
+			'rm-nodelay': this.$store.state.openModal
 		}">
 			<div class="rm-wrapper">
-				<menu-cover 
-					@onOpenMenu="_openMenu"
-					@onClickDetail="_openModal"></menu-cover>
-				<menu-middle
-					@onClickDetail="_openModal"></menu-middle>
-				<menu-right
-					@onCloseMenu="_closeMenu"
-					@onClickDetail="_openModal"></menu-right>
+				<menu-cover></menu-cover>
+				<menu-middle></menu-middle>
+				<menu-right></menu-right>
 			</div>
 		</div>
 	</section>
@@ -41,37 +34,9 @@ export default {
 		MenuRight,
 		MenuModal
 	},
-	props: {
-		openModal: Boolean,
-		openMenu: Boolean
-	},
-	data () {
-		return {
-			dataOpenModal: this.openModal,
-			dataOpenMenu: this.openMenu
-		}
-	},
 	mounted() {
 	},
 	methods: {
-		_openModal(e) {
-			// this.$refs['menu-modal'].dataPageY = e.pageY;
-			this.$refs['menu-modal'].dataImg = e.img;
-			this.$refs['menu-modal'].dataTitle = e.title;
-			this.$refs['menu-modal'].dataPrice = e.price;
-			this.$refs['menu-modal'].dataDescription = e.description;
-
-			this.dataOpenModal = true;
-		},
-		_closeModal() {
-			this.dataOpenModal = false;
-		},
-		_openMenu() {
-			this.dataOpenMenu = true;
-		},
-		_closeMenu() {
-			this.dataOpenMenu = false;
-		}
 	}
 };
 </script>

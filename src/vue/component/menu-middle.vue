@@ -4,9 +4,7 @@
 			<menu-submenu v-for="item in datas"
 					:key="item.index"
 					:title="item.subTitle"
-					:menus="item.menus"
-					@onClickDetail="onClickDetail"></menu-submenu>
-			<!-- <div class="rm-content"></div> -->
+					:menus="item.menus"></menu-submenu>
 			<div class="rm-overlay"></div>
 		</div>
 	</div>
@@ -32,9 +30,6 @@ export default {
 
 	},
 	methods: {
-		onClickDetail(e) {
-			this.$emit('onClickDetail', e);
-		}
 	}
 };
 </script>
