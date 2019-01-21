@@ -9,6 +9,10 @@
 	font-size: 15px;
 }
 
+.rm-notice p .bold {
+    font-weight: bold;
+}
+
 .rm-container {
 	width: 33%;
 	height: 750px;
@@ -101,6 +105,10 @@
 	.rm-container {
 		height: 750px;
 	}
+
+	.rm-notice p {
+		font-size: 12px;
+	}
 }
 
 @media screen and (max-width: 960px) {
@@ -146,5 +154,8 @@
 	.rm-notice {
 		height: auto;
 	}
-}
 
+	.rm-notice p {
+		font-size: 11px;
+	}
+}

@@ -1,6 +1,6 @@
 export default {
 	left: {
-		notice: '모든 식사류에는 <strong>콩나물밥</strong>이 기본 제공됩니다.',
+		notice: '모든 식사류에는 <span class="bold">콩나물밥</span>이 기본 제공됩니다.',
 		groups: [
 			{
 				subTitle: '식사류',
