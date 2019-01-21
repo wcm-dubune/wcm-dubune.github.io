@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* Fallback (similar to last media query) */
 .no-csstransforms3d .rm-container {
 	width: 100%;

@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .overlay {
 	position: fixed;
 	top: 0;
@@ -164,22 +164,6 @@ export default {
 	display: block;
 }
 
-.rm-close {
-	background: #e6b741;
-	text-transform: uppercase;
-	display: block;
-	position: absolute;
-	color: #fff;
-	font-size: 11px;
-	font-weight: 500;
-	line-height: 15px;
-	padding: 2px 5px;
-	top: -19px;
-	opacity: 0;
-	right: 30px;
-	cursor: pointer;
-}
-
 .rm-close-modal {
 	cursor: pointer;
 	right: 21px;
@@ -196,18 +180,6 @@ export default {
 	font-family: Arial, sans-serif;
 }
 
-
-.rm-close {
-	-webkit-transition: all 0.1s ease-in-out 0s;
-	transition: all 0.1s ease-in-out 0s;
-}
-
-.rm-container.rm-open .rm-close {
-	-webkit-transition: all 0.3s ease-in-out 0.8s;
-	transition: all 0.3s ease-in-out 0.8s;
-	opacity: 1;
-}
-
 @media screen and (max-width: 960px) {
 	.rm-modal {
 		position: fixed;
@@ -218,10 +190,6 @@ export default {
 		transform: translateZ(0px);
 		-webkit-transition: opacity 0.6s ease-in-out 0s;
 		transition: opacity 0.6s ease-in-out 0s;
-	}
-
-	.rm-close {
-		display: none;
 	}
 }
 

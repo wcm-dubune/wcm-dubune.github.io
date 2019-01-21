@@ -46,7 +46,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .rm-content {
 	padding: 20px;
 }

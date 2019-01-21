@@ -33,7 +33,12 @@ export default {
 	}
 };
 </script>
-<style>
+
+<style scoped>
+.rm-wrapper .rm-middle {
+	z-index: 50;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
 
 .rm-middle .rm-overlay {
 	background: -moz-linear-gradient(left, rgba(0,0,0,0) 64%, rgba(0,0,0,0.05) 100%);
@@ -42,5 +47,15 @@ export default {
 	background: -o-linear-gradient(left, rgba(0,0,0,0) 64%,rgba(0,0,0,0.05) 100%);
 	background: -ms-linear-gradient(left, rgba(0,0,0,0) 64%,rgba(0,0,0,0.05) 100%);
 	background: linear-gradient(to right, rgba(0,0,0,0) 64%,rgba(0,0,0,0.05) 100%);
+}
+
+.rm-container.rm-open .rm-middle {
+	pointer-events: auto;
+}
+
+@media screen and (max-width: 960px) {
+	.rm-overlay, .rm-middle .rm-overlay {
+		background: transparent;
+	}
 }
 </style>

@@ -53,7 +53,32 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.rm-wrapper .rm-cover {
+	z-index: 100;
+	-webkit-transform-origin: 0% 50%;
+	-webkit-transition-delay: 0.2s;
+	transform-origin: 0% 50%;
+	transition-delay: 0.2s;
+}
+
+.rm-container.rm-open .rm-cover {
+	-webkit-transform: rotateY(-180deg);
+	-webkit-transition-delay: 0s;
+	transform: rotateY(-180deg);
+	transition-delay: 0s;
+}
+
+.main.rm-in .rm-cover {
+	-webkit-transform: rotateY(-150deg);
+	transform: rotateY(-150deg);
+}
+
+.main.rm-in .rm-cover {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
 .rm-content {
 	padding: 20px;
 }
@@ -146,6 +171,20 @@ a.rm-button-open:hover {
 
 	.rm-button-open:after {
 		content: '\2193';
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.rm-container.rm-open .rm-cover {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+
+	.main.rm-in .rm-cover {
+		-webkit-transform: rotateY(0deg);
+		-webkit-transition-delay: 0s;
+		transform: rotateY(0deg);
+		transition-delay: 0s;
 	}
 }
 </style>
