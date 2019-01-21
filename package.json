@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "wcm-dubune homepage",
   "scripts": {
-    "devserver": "webpack-dev-server --open --progress",
+    "devserver": "webpack-dev-server --hot --inline --progress",
     "dev": "webpack",
     "build": "webpack --mode production"
   },
