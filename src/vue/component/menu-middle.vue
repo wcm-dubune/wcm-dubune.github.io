@@ -1,6 +1,9 @@
 <template>
 	<div class="rm-middle">
 		<div class="rm-inner">
+			<div class="rm-notice">
+				<p v-if="notice" v-html="notice"></p>
+			</div>
 			<menu-submenu v-for="item in datas"
 					:key="item.index"
 					:title="item.subTitle"

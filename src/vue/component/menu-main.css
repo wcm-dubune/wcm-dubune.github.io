@@ -1,3 +1,14 @@
+.rm-notice {
+    height: 35px;
+}
+
+.rm-notice p {
+    padding: 10px;
+    background: rgba(213, 193, 154, 0.2);
+	margin: 0;
+	font-size: 15px;
+}
+
 .rm-container {
 	width: 33%;
 	height: 750px;
@@ -130,6 +141,10 @@
 		-webkit-transition-delay: 0s;
 		transform: rotateY(0deg);
 		transition-delay: 0s;
+	}
+
+	.rm-notice {
+		height: auto;
 	}
 }
 

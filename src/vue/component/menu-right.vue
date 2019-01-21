@@ -3,6 +3,9 @@
 		<div class="rm-front"></div>
 		<div class="rm-back">
 			<span class="rm-close" @click="_closeMenu">Close</span>
+			<div class="rm-notice">
+				<p v-if="notice" v-html="notice"></p>
+			</div>
 			<menu-submenu v-for="item in datas"
 					:key="item.index"
 					:title="item.subTitle"
