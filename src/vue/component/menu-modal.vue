@@ -84,6 +84,7 @@ export default {
 
 .rm-modal {
 	position: absolute;
+	display: none;
 	z-index: 10000;
 	width: 600px;
 	top: 30%;
@@ -154,6 +155,7 @@ export default {
 }
 
 .rm-in .rm-modal {
+	display: block;
 	-webkit-transform: translateZ(0px);
 	transform: translateZ(0px);
 	opacity: 1;
