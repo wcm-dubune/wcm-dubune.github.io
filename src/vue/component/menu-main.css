@@ -1,16 +1,16 @@
 .rm-notice {
-    height: 35px;
+	height: 35px;
 }
 
 .rm-notice p {
-    padding: 10px;
-    background: rgba(213, 193, 154, 0.2);
+	padding: 10px;
+	background: rgba(213, 193, 154, 0.2);
 	margin: 0;
 	font-size: 15px;
 }
 
 .rm-notice p .bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .rm-container {
