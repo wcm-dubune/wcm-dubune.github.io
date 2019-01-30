@@ -33,13 +33,13 @@ export default {
 	},
 	methods: {
 		clickDetail(e) {
-			let ds = e.target.dataset;
+			let ds = e.target;
 
 			this.$EventBus.$emit('onClickDetail', {
-				img: ds.thumb,
-				title: ds.name,
-				price: ds.price,
-				description: ds.desc
+				img: ds.getAttribute('data-thumb'),
+				title: ds.getAttribute('data-name'),
+				price: ds.getAttribute('data-price'),
+				description: ds.getAttribute('data-desc')
 			});
 		}
 	}

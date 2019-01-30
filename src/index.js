@@ -1,5 +1,7 @@
+import 'es6-promise/auto'
 import Vue from 'vue';
 import Vuex from 'vuex'
+
 import WcmMain from './vue/wcm-main.vue';
 
 Vue.prototype.$EventBus = new Vue();
