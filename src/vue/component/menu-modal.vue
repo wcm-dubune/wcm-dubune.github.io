@@ -8,7 +8,10 @@
 			@touchmove.self="clickClose"></div>
 		<div class="rm-modal">
 			<div class="rm-thumb" :style="computedImg"></div>
-			<h5>{{dataTitle}}</h5>
+			<h5>
+				<span class="prefix" :class="dataPrefix.class">{{dataPrefix.text}}</span>
+				{{dataTitle}}
+			</h5>
 			<p>{{dataDescription}}</p>
 			<span class="rm-close-modal"
 				@mousedown.self="clickClose"
@@ -24,14 +27,16 @@ export default {
 	props: {
 		img: String,
 		title: String,
-		description: String
+		description: String,
+		prefix: Object
 	},
 	data() {
 		return {
 			dataImg: this.img,
 			dataTitle: this.title,
 			dataPrice: this.price,
-			dataDescription: this.description
+			dataDescription: this.description,
+			dataPrefix: this.prefix
 		}
 	},
 	mounted() {
@@ -40,6 +45,8 @@ export default {
 			this.dataTitle = e.title;
 			this.dataPrice = e.price;
 			this.dataDescription = e.description;
+			this.dataPrefix = e.prefix;
+			console.log();
 
 			this.$store.commit('openModal');
 		});
@@ -207,6 +214,27 @@ export default {
 		-webkit-transition: opacity 0.6s ease-in-out 0s;
 		transition: opacity 0.6s ease-in-out 0s;
 	}
+}
+
+.rm-modal span.prefix {
+	position: absolute;
+	font-size: 70%;
+	font-weight: bold;
+	color: #ff0072;
+	padding: 1px 2px;
+	margin: -20px;
+}
+
+.rm-modal span.summer {
+	font-weight: normal;
+	color: #e94d4d;
+	border-color: #e94d4d;
+}
+
+.rm-modal span.winter {
+	font-weight: normal;
+	color: #3939f7;
+	border-color: #3939f7;
 }
 
 </style>

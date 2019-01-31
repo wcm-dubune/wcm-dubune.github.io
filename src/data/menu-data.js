@@ -9,7 +9,11 @@ export default {
 						name: '두부전골',
 						price: '14,000원',
 						// thumb: '1.jpg',
-						desc: '1인분 이상 주문 가능'
+						desc: '1인분 이상 주문 가능',
+						prefix: {
+							text: 'Best',
+							class: 'best'
+						}
 					},
 					{
 						name: '얼큰순두부',
@@ -59,7 +63,11 @@ export default {
 						name: '홍어삼합',
 						price: '40,000원',
 						// thumb: '1.jpg',
-						desc: '두부 + 고기 + 홍어'
+						desc: '두부 + 고기 + 홍어',
+						prefix: {
+							text: '추천',
+							class: 'recommend'
+						}
 					},
 					{
 						name: '홍어',
@@ -124,22 +132,34 @@ export default {
 				subTitle: '계절메뉴',
 				menus: [
 					{
-						name: '콩국수(하계)',
+						name: '콩국수',
 						price: '9,000원',
 						// thumb: '1.jpg',
-						desc: ''
+						desc: '',
+						prefix: {
+							text: '여름',
+							class: 'summer'
+						}
 					},
 					{
-						name: '도토리묵 무침(하계)',
+						name: '도토리묵 무침',
 						// thumb: '1.jpg',
 						price: '10,000원',
-						desc: ''
+						desc: '',
+						prefix: {
+							text: '여름',
+							class: 'summer'
+						}
 					},
 					{
-						name: '생굴(동계)',
+						name: '생굴',
 						price: '10,000원',
 						// thumb: '1.jpg',
-						desc: ''
+						desc: '',
+						prefix: {
+							text: '겨울',
+							class: 'winter'
+						}
 					}
 				]
 			}

@@ -3,6 +3,9 @@
 		<h4>{{title}}</h4>
 		<dl>
 			<div v-for="item in menus" :key="item.index">
+				<span v-if="item.prefix"
+					class="prefix"
+					:class="item.prefix.class">{{item.prefix.text}}</span>
 				<dt>
 					<template v-if="item.thumb">	
 						<a href="#" class="rm-viewdetails"
@@ -10,12 +13,13 @@
 							:data-name=item.name
 							:data-price=item.price
 							:data-desc=item.desc
+							:data-prefix=JSON.stringify(item.prefix)
 							@click.prevent="clickDetail">{{item.name}}</a>
 					</template>
 					<template v-else>
 						{{item.name}}
 					</template>
-					<span>{{item.price}}</span>
+					<span class="price">{{item.price}}</span>
 				</dt>
 				<dd>{{item.desc}}</dd>
 			</div>
@@ -39,7 +43,8 @@ export default {
 				img: ds.getAttribute('data-thumb'),
 				title: ds.getAttribute('data-name'),
 				price: ds.getAttribute('data-price'),
-				description: ds.getAttribute('data-desc')
+				description: ds.getAttribute('data-desc'),
+				prefix: JSON.parse(ds.getAttribute('data-prefix'))
 			});
 		}
 	}
@@ -109,7 +114,31 @@ export default {
 	padding: 10px 0;
 }
 
-.rm-content dl dt span {
+.rm-content dl span.prefix {
+	position: absolute;
+	font-size: 70%;
+	font-weight: bold;
+	color: #ff0072;
+	border-width: 1px;
+	border-style: dotted;
+	border-radius: 30%;
+	padding: 1px 2px;
+	margin: -10px;
+}
+
+.rm-content dl span.summer {
+	font-weight: normal;
+	color: #e94d4d;
+	border-color: #e94d4d;
+}
+
+.rm-content dl span.winter {
+	font-weight: normal;
+	color: #3939f7;
+	border-color: #3939f7;
+}
+
+.rm-content dl dt span.price {
 	float: right;
 }
 
