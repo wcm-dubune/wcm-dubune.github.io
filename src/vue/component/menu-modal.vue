@@ -9,7 +9,7 @@
 		<div class="rm-modal">
 			<div class="rm-thumb" :style="computedImg"></div>
 			<h5>
-				<span class="prefix" :class="dataPrefix.class">{{dataPrefix.text}}</span>
+				<span class="prefix" :class="computedClass">{{computedText}}</span>
 				{{dataTitle}}
 			</h5>
 			<p>{{dataDescription}}</p>
@@ -54,6 +54,12 @@ export default {
 	computed: {
 		computedImg(v) {
 			return `background-image: url(${this.dataImg})`;
+		},
+		computedClass() {
+			return this.dataPrefix ? this.dataPrefix.class : '';
+		},
+		computedText() {
+			return this.dataPrefix ? this.dataPrefix.text : '';
 		}
 	},
 	methods: {
