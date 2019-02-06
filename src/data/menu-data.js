@@ -8,8 +8,8 @@ export default {
 					{
 						name: '두부전골',
 						price: '14,000원',
-						// thumb: '1.jpg',
-						desc: '1인분 이상 주문 가능',
+						thumb: '수정_전골2.jpg',
+						desc: '2인분 이상 주문 가능',
 						prefix: {
 							text: 'Best',
 							class: 'best'
@@ -18,19 +18,19 @@ export default {
 					{
 						name: '얼큰순두부',
 						price: '9,000원',
-						// thumb: '1.jpg',
+						thumb: '수정_얼큰.jpg',
 						desc: ''
 					},
 					{
 						name: '즉석순두부',
 						price: '8,000원',
-						// thumb: '1.jpg',
+						thumb: '수정_순두부.jpg',
 						desc: ''
 					},
 					{
 						name: '청국장',
 						price: '9,000원',
-						// thumb: '1.jpg',
+						thumb: '수정_청국장.jpg',
 						desc: ''
 					},
 					{
@@ -62,8 +62,8 @@ export default {
 					{
 						name: '홍어삼합',
 						price: '40,000원',
-						// thumb: '1.jpg',
-						desc: '두부 + 고기 + 홍어',
+						thumb: '수정_홍어삼합.jpg',
+						desc: '홍어 + 고기 + 김치',
 						prefix: {
 							text: '추천',
 							class: 'recommend'

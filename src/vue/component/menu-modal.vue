@@ -129,6 +129,7 @@ export default {
 	display: inline-block;
 	width: 200px;
 	height: 200px;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	margin: 0 0 20px 0;
