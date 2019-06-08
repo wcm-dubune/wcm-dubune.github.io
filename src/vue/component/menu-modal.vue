@@ -7,7 +7,9 @@
         	@touchstart.self="clickClose"
 			@touchmove.self="clickClose"></div>
 		<div class="rm-modal">
-			<div class="rm-thumb" :style="computedImg"></div>
+			<div class="rm-thumb">
+				<img :src="computedImg">
+			</div>
 			<h5>
 				<span class="prefix" :class="computedClass">{{computedText}}</span>
 				{{dataTitle}}
@@ -53,7 +55,7 @@ export default {
 	},
 	computed: {
 		computedImg(v) {
-			return `background-image: url(${this.dataImg})`;
+			return `${this.dataImg}`;
 		},
 		computedClass() {
 			return this.dataPrefix ? this.dataPrefix.class : '';
@@ -127,15 +129,15 @@ export default {
 
 .rm-modal .rm-thumb {
 	display: inline-block;
-	width: 200px;
-	height: 200px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+	width: 270px;
 	margin: 0 0 20px 0;
-	box-shadow: 
-		inset 1px 1px 3px rgba(0,0,0,0.2), 
-		1px 1px 1px rgba(255,255,255,0.9);
+}
+
+.rm-modal .rm-thumb img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10%;
+	border: 7px solid #f5dece;
 }
 
 .rm-modal a:after {
