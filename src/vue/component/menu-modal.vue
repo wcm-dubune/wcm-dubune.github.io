@@ -129,15 +129,16 @@ export default {
 
 .rm-modal .rm-thumb {
 	display: inline-block;
-	width: 270px;
+	width: 100%;
+	max-width: 350px;
 	margin: 0 0 20px 0;
 }
 
 .rm-modal .rm-thumb img {
 	width: 100%;
 	height: 100%;
-	border-radius: 10%;
-	border: 7px solid #f5dece;
+	border-radius: 5px;
+	border: 5px solid rgba(169, 169, 169, 0.35);
 }
 
 .rm-modal a:after {
