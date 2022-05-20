@@ -166,6 +166,8 @@ a.rm-viewdetails:before{
 }
 
 a.rm-viewdetails {
+	position: relative;
+	left: -23px;
 	color: #e6b741;
 	font-weight: 500;
 }

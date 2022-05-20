@@ -7,7 +7,7 @@ export default {
 				menus: [
 					{
 						name: '두부전골',
-						price: '14,000원',
+						price: '15,000원',
 						thumb: '전골.jpg',
 						desc: '2인분 이상 주문 가능',
 						prefix: {
@@ -16,38 +16,44 @@ export default {
 						}
 					},
 					{
+						name: '두부부대전골',
+						price: '13,000원',
+						desc: '2인분 이상 주문 가능'
+					},
+					{
 						name: '얼큰순두부',
-						price: '9,000원',
+						price: '10,000원',
 						// thumb: '수정_얼큰.jpg',
 						desc: ''
 					},
 					{
 						name: '즉석순두부',
-						price: '8,000원',
+						price: '9,000원',
 						thumb: '순두부.jpg',
 						desc: ''
 					},
 					{
-						name: '청국장',
-						price: '9,000원',
+						name: '홍어청국장',
+						price: '11,000원',
 						// thumb: '수정_청국장.jpg',
 						desc: ''
 					},
 					{
-						name: '수제돈까스',
-						price: '9,000원',
+						name: '청국장',
+						price: '10,000원',
+						// thumb: '수정_청국장.jpg',
+						desc: ''
+					},
+					{
+						name: '우렁강된장',
+						price: '11,000원',
 						// thumb: '1.jpg',
 						desc: ''
-					}
-				]
-			},
-			{
-				subTitle: '추가메뉴',
-				menus: [
+					},
 					{
-						name: '콩나물밥 추가',
-						price: '3,000원',
-						thumb: '콩나물밥.jpg',
+						name: '곤드레밥',
+						price: '10,000원',
+						// thumb: '1.jpg',
 						desc: ''
 					}
 				]
@@ -61,7 +67,7 @@ export default {
 				menus: [
 					{
 						name: '홍어삼합',
-						price: '40,000원',
+						price: '45,000원',
 						thumb: '홍어삼합.jpg',
 						desc: '홍어 + 고기 + 김치',
 						prefix: {
@@ -71,19 +77,19 @@ export default {
 					},
 					{
 						name: '홍어',
-						price: '15,000원',
+						price: '17,000원',
 						// thumb: '1.jpg',
 						desc: ''
 					},
 					{
 						name: '수육',
-						price: '10,000원',
+						price: '12,000원',
 						// thumb: '1.jpg',
 						desc: ''
 					},
 					{
 						name: '모두부',
-						price: '10,000원',
+						price: '12,000원',
 						// thumb: '1.jpg',
 						desc: ''
 					},
@@ -94,15 +100,31 @@ export default {
 						desc: ''
 					},
 					{
-						name: '도토리묵 무침',
+						name: '감자전',
+						price: '6,000원',
+						// thumb: '1.jpg',
+						desc: ''
+					},
+					{
+						name: '도토리묵무침',
+						// thumb: '1.jpg',
+						price: '12,000원',
+						desc: '',
+						prefix: {
+							text: '여름',
+							class: 'summer'
+						}
+					},
+					{
+						name: '콩국수',
 						// thumb: '1.jpg',
 						price: '10,000원',
 						desc: '',
-						// prefix: {
-						// 	text: '여름',
-						// 	class: 'summer'
-						// }
-					},
+						prefix: {
+							text: '여름',
+							class: 'summer'
+						}
+					}
 				]
 			}
 		]
@@ -110,23 +132,29 @@ export default {
 	right: {
 		groups: [
 			{
-				subTitle: '주류',
+				subTitle: '주류 및 추가메뉴',
 				menus: [
 					{
+						name: '콩나물밥 추가',
+						price: '3,000원',
+						thumb: '콩나물밥.jpg',
+						desc: ''
+					},
+					{
 						name: '소주',
-						price: '4,000원',
+						price: '5,000원',
 						// thumb: '1.jpg',
 						desc: ''
 					},
 					{
 						name: '맥주',
-						price: '4,000원',
+						price: '5,000원',
 						// thumb: '1.jpg',
 						desc: ''
 					},
 					{
 						name: '막걸리',
-						price: '3,000원',
+						price: '4,000원',
 						// thumb: '1.jpg',
 						desc: ''
 					},
@@ -138,41 +166,41 @@ export default {
 					}
 				]
 			},
-			{
-				subTitle: '계절메뉴',
-				menus: [
-					{
-						name: '콩국수',
-						price: '9,000원',
-						// thumb: '1.jpg',
-						desc: '',
-						prefix: {
-							text: '여름',
-							class: 'summer'
-						}
-					},
-					// {
-					// 	name: '도토리묵 무침',
-					// 	// thumb: '1.jpg',
-					// 	price: '10,000원',
-					// 	desc: '',
-					// 	prefix: {
-					// 		text: '여름',
-					// 		class: 'summer'
-					// 	}
-					// },
-					{
-						name: '생굴',
-						price: '10,000원',
-						// thumb: '1.jpg',
-						desc: '',
-						prefix: {
-							text: '겨울',
-							class: 'winter'
-						}
-					}
-				]
-			}
+			// {
+			// 	subTitle: '계절메뉴',
+			// 	menus: [
+			// 		{
+			// 			name: '콩국수',
+			// 			price: '9,000원',
+			// 			// thumb: '1.jpg',
+			// 			desc: '',
+			// 			prefix: {
+			// 				text: '여름',
+			// 				class: 'summer'
+			// 			}
+			// 		},
+			// 		// {
+			// 		// 	name: '도토리묵 무침',
+			// 		// 	// thumb: '1.jpg',
+			// 		// 	price: '10,000원',
+			// 		// 	desc: '',
+			// 		// 	prefix: {
+			// 		// 		text: '여름',
+			// 		// 		class: 'summer'
+			// 		// 	}
+			// 		// },
+			// 		{
+			// 			name: '생굴',
+			// 			price: '10,000원',
+			// 			// thumb: '1.jpg',
+			// 			desc: '',
+			// 			prefix: {
+			// 				text: '겨울',
+			// 				class: 'winter'
+			// 			}
+			// 		}
+			// 	]
+			// }
 		]
 	}
 };
